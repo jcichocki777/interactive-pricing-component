@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive pricing component</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="header-container">
+      <h1 class="header">Simple, traffic-based pricing</h1>
+      <p class="trial-info">
+        Sign-up for our 30 day trial. <br />
+        No credit card required
+      </p>
+        <img
+          src="images/pattern-circles.svg"
+          alt="Circles background image"
+          class="header-image"
+        />
+    </div>
+    <div class="pricing-container">
+      <div class="pricing__card">
+        <div class="slider-container">
+          <p class="pageviews">100k pageviews</p>
+            <input
+              type="range"
+              min="0"
+              max="50"
+              value="16"
+              step="0.01"
+              class="slider"
+              id="slider"
+              oninput="slider()"
+            />
+            <p class="slider-value"><span>$16.00</span> / month</p>
+          </div>
+            <div class="toggle-container">
+              <span class="toggle-monthly-billing-text">Monthly Billing</span>
+              <input type="checkbox" id="check" class="toggle" onclick="calcYearlyBilling()"/>
+              <label for="check" class="toggle-label">Toggle</label>
+              <span class="toggle-yearly-billing-text">
+                Yearly Billing 
+              </span>
+              <span class="discount-percantage-icon">-25%</span>
+            </div>
+      </div>
+        <div class="break-line"></div>
+        <div class="benefits-list">
+          <ul class="benefits">
+            <li class="benefit">Unlimited websites</li>
+            <li class="benefit">100% data ownership</li>
+            <li class="benefit">Email reports</li>
+          </ul>
+          <div class="button-container">
+            <button class="submit-btn">Start my trial</button>
+          </div>
+        </div>
+          
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
