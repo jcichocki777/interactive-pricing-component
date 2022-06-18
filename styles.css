@@ -40,32 +40,35 @@ body {
 
 /* Header styles */
 
-.header-container {
+header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin-bottom: -100px;
+    transform: translateY(120px);
 }
 
-.header {
+.header-title {
     font-size: 1.5rem;
     font-weight: 800;
 }
 
-.trial-info {
+.header-text {
     font-size: 1rem;
     color: var(--grayish-blue);
 }
 
 .header-image{
-    transform: translate(0, -120px);
+    background: url(images/pattern-circles.svg) no-repeat;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    transform: translate(20px, -120px);
     z-index: -9999;
 }
 
 /* Pricing card styles */
 
-.pricing-container {
+.pricing-wrapper {
     height: 540px;
     width: 90%;
     background: var(--white);
@@ -77,7 +80,7 @@ body {
     box-shadow: 0px 10px 24px -18px rgba(66, 68, 90, 1);
 }
 
-.pricing__card {
+.pricing {
     height: 50%;
     width: 100%;
     display: flex;
@@ -163,7 +166,7 @@ body {
     color: var(--dark-desaturated-blue);
 }
 
-.toggle-monthly-billing-text {
+.toggle-monthly {
     transform: translateX(15px);
 }
 
@@ -178,7 +181,7 @@ body {
     color: var(--grayish-blue);
 }
 
-.toggle {
+.toggle-btn {
     height: 0;
     width: 0;
     visibility: hidden;
@@ -222,16 +225,16 @@ body {
 }
 
 
-.toggle:checked + .toggle-label {
+.toggle-btn:checked + .toggle-label {
     background-color: var(--strong-cyan);
 }
 
-.toggle:checked + .toggle-label:after {
+.toggle-btn:checked + .toggle-label:after {
     left: calc(100% - 3px);
     transform: translateX(-100%);
 }
 
-.benefits-list {
+footer {
     height: 30%;
     display: flex;
     flex-direction: column;
@@ -243,7 +246,7 @@ body {
     margin-bottom: 15px;
 }
 
-.benefit {
+.benefit-list {
     margin: 10px 0 0 0;
 }
 
@@ -257,14 +260,13 @@ body {
     font-weight: 600;
 }
 
-.break-line {
-    height: 2px;
+hr {
     width: 100%;
-    background: var(--light-grayish-blue);
+    border: 1px solid var(--light-grayish-blue);
 }
 
  @media screen and (min-width: 1440px) {
-    .pricing-container {
+    .pricing-wrapper {
         max-width: 40%;
         height: 480px;
     }
@@ -297,7 +299,7 @@ body {
         grid-area: pageviews;
     }
 
-    .benefits-list {
+    footer {
         display: flex;
         width: 100%;
         flex-direction: row;

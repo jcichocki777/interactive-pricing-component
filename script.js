@@ -1,13 +1,8 @@
 const mySlider = document.querySelector(".slider");
 const sliderVal = document.querySelector(".slider-value span");
-const toggleBtn = document.querySelector(".toggle");
+const toggleBtn = document.querySelector(".toggle-btn");
 
-function slider() {
-  valPercent = (mySlider.value / mySlider.max) * 100;
-  mySlider.style.background = `linear-gradient(to right, hsl(174, 77%, 80%) ${valPercent}%, hsl(224, 65%, 95%) ${valPercent}%)`;
-  //   sliderVal.textContent = `$${mySlider.value}`;
-  calcYearlyBilling();
-}
+function slider() {}
 
 function calcYearlyBilling() {
   const yearlyBillingValue = Number((mySlider.value * 0.75 * 12).toFixed(2));
@@ -17,3 +12,12 @@ function calcYearlyBilling() {
     sliderVal.textContent = `$${mySlider.value}`;
   }
 }
+
+mySlider.addEventListener("input", () => {
+  valPercent = (mySlider.value / mySlider.max) * 100;
+  mySlider.style.background = `linear-gradient(to right, hsl(174, 77%, 80%) ${valPercent}%, hsl(224, 65%, 95%) ${valPercent}%)`;
+  //   sliderVal.textContent = `$${mySlider.value}`;
+  calcYearlyBilling();
+});
+
+toggleBtn.addEventListener("change", () => calcYearlyBilling()); // ?????????????

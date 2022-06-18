@@ -8,22 +8,19 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="header-container">
-      <h1 class="header">Simple, traffic-based pricing</h1>
-      <p class="trial-info">
+    <header>
+      <h1 class="header-title">Simple, traffic-based pricing</h1>
+      <p class="header-text">
         Sign-up for our 30 day trial. <br />
         No credit card required
       </p>
-        <img
-          src="images/pattern-circles.svg"
-          alt="Circles background image"
-          class="header-image"
-        />
-    </div>
-    <div class="pricing-container">
-      <div class="pricing__card">
+        <div class="header-image"></div>
+    </header>
+    <section class="pricing-wrapper">
+      <section class="pricing">
         <div class="slider-container">
           <p class="pageviews">100k pageviews</p>
+          <label for="slider" class="sr-only"></label>
             <input
               type="range"
               min="0"
@@ -37,18 +34,18 @@
             <p class="slider-value"><span>$16.00</span> / month</p>
           </div>
             <div class="toggle-container">
-              <span class="toggle-monthly-billing-text">Monthly Billing</span>
-              <input type="checkbox" id="check" class="toggle" onclick="calcYearlyBilling()"/>
+              <span class="toggle-monthly">Monthly Billing</span>
+              <input type="checkbox" id="check" class="toggle-btn" />
               <label for="check" class="toggle-label">Toggle</label>
-              <span class="toggle-yearly-billing-text">
+              <span class="toggle-yearly">
                 Yearly Billing 
               </span>
               <span class="discount-percantage-icon">-25%</span>
             </div>
-      </div>
-        <div class="break-line"></div>
-        <div class="benefits-list">
-          <ul class="benefits">
+          </section>
+        <hr>
+        <footer>
+          <ul class="benefits-list">
             <li class="benefit">Unlimited websites</li>
             <li class="benefit">100% data ownership</li>
             <li class="benefit">Email reports</li>
@@ -56,10 +53,10 @@
           <div class="button-container">
             <button class="submit-btn">Start my trial</button>
           </div>
-        </div>
+        </footer>
           
         </div>
-    </div>
+      </section>
 
     <script src="script.js"></script>
   </body>
